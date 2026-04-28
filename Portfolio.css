@@ -389,6 +389,7 @@ li::marker {
     flex-flow: row;
     justify-content: center;
     align-items: center;
+    gap: 5px;
     
 }
 .article .code{
