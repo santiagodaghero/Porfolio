@@ -1022,24 +1022,7 @@ html {
     
   }
   
-  /* Style rules for dark mode */
-@media (prefers-color-scheme: dark) {
-    body {
-        --bkcolor-primario:#34353a;
-        --bkcolor-secundario:#1d1d1d;
-        --color-primario:#f0bf6c;
-        --color-secundario: #FFFF;
-    }
-  }
-  /* Style rules for light mode */
-  @media (prefers-color-scheme: light) {
-    body {
-        --bkcolor-primario:#ceeeef;
-        --bkcolor-secundario: #f5f5f5;
-        --color-primario: #8ed0ed;
-        --color-secundario: #616668;
-    }
-  }
+
 
 /* ===== SLIDER WRAPPER ===== */
  @media screen and (max-width: 480px){
