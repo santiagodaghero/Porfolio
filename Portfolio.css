@@ -6,16 +6,29 @@
     --color-primario:#f0bf6c;
     --color-primario2:#f0bf6d;
     --color-secundario: #FFFF;
+    --btn-color:#1d1d1d;
+    --txt-color:#F8F6F2;
+
+      --img-clima: url("img/Clima-dark.png");
 
   }
 
 .light-theme{
-    --bkcolor-primario:#e1dddd;
-    --bkcolor-secundario: #f5f5f5;
+    --bkcolor-primario:#F8F6F2;
+    --bkcolor-secundario:#f5efe6;
     --color-primario: #f0bf6c;
     --color-primario2:#616668;
     --color-secundario: #616668;      
+    --btn-color:#616668;
+    --border-color:#e5e5e5;
+    --shadow-card: 0 10px 30px rgba(0,0,0,0.06);
+    --shadow-card-hover: 0 20px 50px rgba(0,0,0,0.12);
+    --txt-color:#F8F6F2;
+
+    --img-clima: url("img/Clima-light.png");
+
 }
+
 
 * {
     margin: 0;
@@ -24,17 +37,23 @@
     box-sizing: border-box;
     vertical-align: baseline;
   }
-  img , figure{
-    max-width: 100%;
-    width: 100%;
-    display: flex;
-    object-fit: cover;
-    object-position: center center;
-  }
+figure {
+  max-width: 100%;
+  width: 100%;
+  background-image: var(--img-clima);
+  background-size: cover;
+  background-position: center center;
+  min-height: 215px; /* altura necesaria para que se vea el fondo */
+}
+
+figure img {
+  display: none; /* si src está vacío, ocultarlo */
+}
   a {
     display: block;
     text-decoration: none;
     color: inherit;
+    
   }
 
   h1,h2,h3,h4,h5,h6 {
@@ -48,6 +67,81 @@
 html, body {
     margin: 0;
   }
+
+.container__skills {
+    width: 97%;
+    padding: 0.5em 0.5em 0.2em;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.light-theme .container__skills {
+    border-top: 1px solid var(--border-color);
+}
+
+.skills__title {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    font-size: 0.60em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--color-primario);
+    text-transform: uppercase;
+    margin-bottom: 0.6em;
+    padding-bottom: 1em;
+}
+
+.skills__list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.4em;
+    padding-bottom: 1em;
+}
+
+.skill__badge {
+    font-size: 0.75em;
+    padding: 0.3em 0.7em;
+    border-radius: 2em;
+    background-color: rgba(240, 191, 108, 0.1);
+    color: var(--color-secundario);
+    border: 1px solid rgba(240, 191, 108, 0.2);
+    white-space: nowrap;
+    
+}
+
+.light-theme .skill__badge {
+    background-color: rgba(97, 102, 104, 0.08);
+    border-color: var(--border-color);
+}
+
+
+p.description{
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 #particle-canvas {
     width: 100%;
@@ -252,14 +346,16 @@ span{
     font-family: var(--tipo-titular);
     font-size: 5em;
     font-weight: 600;
-    color:var(--color-primario2);
+    color:var(--color-primario);
+
+
 }
 .section .h3_presentation{
     margin: 0.8em 0 0;
     font-family: var(--tipo-titular);
     font-size: 2em;
     font-weight: 600;
-    color: var(--color-primario2);
+    color: var(--color-primario2)
 }
 
 .section .h2{
@@ -381,6 +477,8 @@ li::marker {
     position: relative;
     overflow: hidden;
     border-radius: 1em;
+
+    box-shadow: var(--shadow-card-hover);
 }
 
 .article .conteiner__code{
@@ -390,6 +488,7 @@ li::marker {
     justify-content: center;
     align-items: center;
     gap: 5px;
+    padding-bottom: 1em;
     
 }
 .article .code{
@@ -406,6 +505,7 @@ li::marker {
     padding: 0 1em;
     transition: all 0.2s ease;  
     cursor: pointer;  
+
 }
 
 .svg_code{
@@ -421,6 +521,7 @@ li::marker {
     padding: 0.5em;
     min-height: 6em;
     background-color: var(--bkcolor-primario);
+    border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .section .figure{
@@ -486,11 +587,11 @@ li::marker {
 }
 
 .cv{
-    background-color:  var(--bkcolor-secundario);
+    background-color:  var(--btn-color);
     font-size: 1.2em;
     padding: 1em;
     margin: 2em 0 0 0;
-    color: var(--color-secundario);
+    color: var(--txt-color);
     display: flex;
     border-radius: 1em;
     cursor: pointer;
@@ -518,6 +619,8 @@ li::marker {
     min-width: 25em;
     background-color:  var(--bkcolor-primario);
     border-radius: 1em;
+
+    box-shadow: var(--shadow-card-hover);
 }
 
 .skill{
@@ -796,7 +899,7 @@ html {
         flex: 0 0 80vw;
         max-width: 80vw;
         scroll-snap-align: center;
-        min-height: 28vh;
+        min-height: 30vh;
     }
 
     /* ===== BOTONES PREV / NEXT ===== */
