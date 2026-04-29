@@ -117,6 +117,7 @@ html, body {
 
 p.description{
     text-align: left;
+    border-top: 1px solid var(--border-color);
 }
 
 
