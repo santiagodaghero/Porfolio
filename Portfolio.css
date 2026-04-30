@@ -68,82 +68,48 @@ html, body {
     margin: 0;
   }
 
-.container__skills {
-    width: 97%;
-    padding: 0.5em 0.5em 0.2em;
-    border-top: 1px solid rgba(255,255,255,0.08);
+
+/*prueba clic*/
+.section .figure .img {
+    cursor: zoom-in;
+    transition: opacity 0.2s ease;
 }
 
-.light-theme .container__skills {
-    border-top: 1px solid var(--border-color);
+.section .figure .img:hover {
+    opacity: 0.88;
 }
 
-.skills__title {
-    display: flex;
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    justify-content: center;
     align-items: center;
-    gap: 0.4em;
-    font-size: 0.60em;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    color: var(--color-primario);
-    text-transform: uppercase;
-    margin-bottom: 0.6em;
-    padding-bottom: 1em;
+    cursor: zoom-out;
 }
 
-.skills__list {
+.modal.active {
     display: flex;
-    flex-flow: row wrap;
-    gap: 0.4em;
-    padding-bottom: 1em;
 }
 
-.skill__badge {
-    font-size: 0.75em;
-    padding: 0.3em 0.7em;
-    border-radius: 2em;
-    background-color: rgba(240, 191, 108, 0.1);
-    color: var(--color-secundario);
-    border: 1px solid rgba(240, 191, 108, 0.2);
-    white-space: nowrap;
-    
+.modal img {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    animation: modalIn 0.25s ease;
 }
 
-.light-theme .skill__badge {
-    background-color: rgba(97, 102, 104, 0.08);
-    border-color: var(--border-color);
-}
-
-
-p.description{
-    text-align: left;
-    border-top: 1px solid var(--border-color);
+@keyframes modalIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 #particle-canvas {
     width: 100%;
     height: 100vh;
@@ -555,6 +521,59 @@ li::marker {
     font-style: normal;
     margin: 1.5em 0 1.5em;
 }
+
+.container__skills {
+    width: 97%;
+    padding: 0.5em 0.5em 0.2em;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.light-theme .container__skills {
+    border-top: 1px solid var(--border-color);
+}
+
+.skills__title {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    font-size: 0.60em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--color-primario);
+    text-transform: uppercase;
+    margin-bottom: 0.6em;
+    padding-bottom: 1em;
+}
+
+.skills__list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.4em;
+    padding-bottom: 1em;
+}
+
+.skill__badge {
+    font-size: 0.75em;
+    padding: 0.3em 0.7em;
+    border-radius: 2em;
+    background-color: rgba(240, 191, 108, 0.1);
+    color: var(--color-secundario);
+    border: 1px solid rgba(240, 191, 108, 0.2);
+    white-space: nowrap;
+    
+}
+
+.light-theme .skill__badge {
+    background-color: rgba(97, 102, 104, 0.08);
+    border-color: var(--border-color);
+}
+
+
+p.description{
+    text-align: left;
+    border-top: 1px solid var(--border-color);
+}
+
 
 .section .h4{
     width: 100%;

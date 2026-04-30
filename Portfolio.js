@@ -280,3 +280,27 @@ function startAnimation() {
     setup();
     window.addEventListener('resize', setup); // se recalcula si cambia el tamaño
 })();
+
+
+// prueba clic en imagen
+function openModal() {
+    const modal = document.getElementById("modal");
+    const imgUrl = getComputedStyle(document.documentElement)
+        .getPropertyValue('--img-clima')
+        .trim()
+        .replace(/^url\(["']?/, '')
+        .replace(/["']?\)$/, '');
+    
+    document.getElementById("modalImg").src = imgUrl;
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+    document.getElementById("modal").classList.remove("active");
+    document.body.style.overflow = "";
+}
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+});

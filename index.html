@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">    
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-    <script src='Portfolio.js' defer></script>   
+
 </head>
 <body>
     <header class="header">
@@ -79,9 +79,10 @@
             <div class="grid">
 
 <article class="article">
-    <figure class="figure">
+    <figure class="figure" class="figure" onclick="openModal()" style="cursor:zoom-in;">
         <img src="" alt="Imagen" class="img" loading="lazy">
     </figure>
+
     <p class="description">Mood Weather — App del clima con UI adaptativa. Detecta tu ubicación y cambia visualmente según el clima en tiempo real.</p>
 
     <!-- SKILLS -->
@@ -209,7 +210,11 @@
 </article>
 <article class="article">
     <figure class="figure">
-        <img src="" alt="Imagen" class="img" loading="lazy">
+        <img  
+        alt="Mood Weather mockup" 
+        class="img" 
+        loading="lazy"
+        onclick="openModal()">
     </figure>
     <p class="description">Mood Weather — App del clima con UI adaptativa. Detecta tu ubicación y cambia visualmente según el clima en tiempo real.</p>
 
@@ -534,6 +539,9 @@
         </section>
     </main>
 
+    <div id="modal" class="modal" onclick="closeModal()">
+        <img id="modalImg" alt="Mood Weather preview">
+    </div>
 
     <footer class="footer"> 
         <spam class="spam-footer">Hecho por Santiago Daghero</spam>
@@ -548,4 +556,6 @@
     </footer>
 <script src='Portfolio.js' defer></script>
 </body>
+
+
 </html>
