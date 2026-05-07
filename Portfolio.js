@@ -283,16 +283,10 @@ function startAnimation() {
 
 
 // prueba clic en imagen
-function openModal() {
-    const modal = document.getElementById("modal");
-    const imgUrl = getComputedStyle(document.documentElement)
-        .getPropertyValue('--img-clima')
-        .trim()
-        .replace(/^url\(["']?/, '')
-        .replace(/["']?\)$/, '');
-    
-    document.getElementById("modalImg").src = imgUrl;
-    modal.classList.add("active");
+function openModal(figure) {
+    const img = figure.querySelector('img');
+    document.getElementById("modalImg").src = img.src;
+    document.getElementById("modal").classList.add("active");
     document.body.style.overflow = "hidden";
 }
 
