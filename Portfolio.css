@@ -4,12 +4,12 @@
     --bkcolor-primario:#34353a;
     --bkcolor-secundario:#1d1d1d;
     --color-primario:#f0bf6c;
+    --color-primario-name:#f0bf6c;
     --color-primario2:#f0bf6d;
     --color-secundario: #FFFF;
     --btn-color:#1d1d1d;
     --txt-color:#F8F6F2;
 
-      --img-clima: url("img/Clima-dark.png");
 
   }
 
@@ -18,6 +18,7 @@
     --bkcolor-secundario:#f5efe6;
     --color-primario: #f0bf6c;
     --color-primario2:#616668;
+    --color-primario-name:#616668;
     --color-secundario: #616668;      
     --btn-color:#616668;
     --border-color:#e5e5e5;
@@ -25,7 +26,6 @@
     --shadow-card-hover: 0 20px 50px rgba(0,0,0,0.12);
     --txt-color:#F8F6F2;
 
-    --img-clima: url("img/Clima-light.png");
 
 }
 
@@ -40,15 +40,12 @@
 figure {
   max-width: 100%;
   width: 100%;
-  background-image: var(--img-clima);
   background-size: cover;
   background-position: center center;
   min-height: 215px; /* altura necesaria para que se vea el fondo */
 }
 
-figure img {
-  display: none; /* si src está vacío, ocultarlo */
-}
+
   a {
     display: block;
     text-decoration: none;
@@ -314,7 +311,7 @@ span{
     font-family: var(--tipo-titular);
     font-size: 5em;
     font-weight: 600;
-    color:var(--color-primario);
+    color:var(--color-primario2);
 
 
 }
@@ -1184,11 +1181,17 @@ html {
 .section .grid::-webkit-scrollbar {
     display: none;
 }
+
+.article{
+       height: 480px;
+}
+
 .section .article {
     flex: 0 0 80vw;
     max-width: 80vw;
     scroll-snap-align: center;
     min-height: 28vh;
+    
 }
 
 /* ===== BOTONES PREV / NEXT ===== */
