@@ -489,7 +489,7 @@ li::marker {
     height: 6.8em;              /* altura fija, equivale a ~4 líneas de texto */
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    line-clamp: 4;
     -webkit-box-orient: vertical;
     background-color: var(--bkcolor-primario);
     border-top: 1px solid rgba(255,255,255,0.08);
