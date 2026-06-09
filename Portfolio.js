@@ -274,7 +274,7 @@ function startAnimation() {
     function goTo(index) {
         const cards = getCards();
         if (index < 0 || index >= cards.length) return;
-        cards[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        cards[index].scrollIntoView({ block: 'nearest', inline: 'nearest' });
         updateUI(index);
     }
 
