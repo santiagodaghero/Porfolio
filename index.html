@@ -70,7 +70,7 @@
 
         <section class="section trabajos" id="Trabajos">
             <h2 class="h2">Trabajos</h2>
-            <p class="p">Aquí te presento algunos de los proyectos que he desarrollado.</p>
+            <p class="bio">Aquí te presento algunos de los proyectos que he desarrollado.</p>
 
 
             <div class="slider-wrapper">
@@ -83,7 +83,10 @@
             <img src="img/Clima-dark.png" alt="Clima" class="img" loading="lazy">
         </figure>
 
-    <p class="description">Mood Weather <br> App del clima con UI adaptativa. Detecta tu ubicación y cambia visualmente según el clima en tiempo real.</p>
+    <div class="description">
+        <h3 class="description__title">Mood Weather</h3>
+        <p class="description__text">App del clima con UI adaptativa. Detecta tu ubicación y cambia visualmente según el clima en tiempo real.</p>
+    </div>
 
     <!-- SKILLS -->
     <div class="container__skills">
@@ -126,7 +129,10 @@
         <figure class="figure" onclick="openModal(this)">
             <img src="img/Kanban-app.png" alt="Clima" class="img" loading="lazy">
         </figure>
-    <p class="description">Tablero Kanban interactivo <br> Permite crear, editar, eliminar y arrastrar tareas entre columnas. Las tarjetas se colorean según la prioridad de cada tarea.</p>
+    <div class="description">
+        <h3 class="description__title">Tablero Kanban interactivo</h3>
+        <p class="description__text">Permite crear, editar, eliminar y arrastrar tareas entre columnas. Las tarjetas se colorean según la prioridad de cada tarea.</p>
+    </div>
 
     <!-- SKILLS -->
     <div class="container__skills">
@@ -169,7 +175,10 @@
         <figure class="figure" onclick="openModal(this)">
             <img src="img/cine-app.png" alt="Cine-app" class="img" loading="lazy">
         </figure>
-    <p class="description">App de cine <br> Construida con React que consume la API de The Movie DB. Permite explorar películas populares, mejor puntuadas y estrenos, con buscador en tiempo real.</p>
+    <div class="description">
+        <h3 class="description__title">App de cine</h3>
+        <p class="description__text">Construida con React que consume la API de The Movie DB. Permite explorar películas populares, mejor puntuadas y estrenos, con buscador en tiempo real.</p>
+    </div>
 
     <!-- SKILLS -->
     <div class="container__skills">
@@ -213,7 +222,10 @@
         <figure class="figure" onclick="openModal(this)">
             <img src="img/TechStore.png" alt="Clima" class="img" loading="lazy">
         </figure>
-    <p class="description">TechStore Agency <br> Landing page con dashboard en vivo, donde muestra estadísticas que se actualizan en tiempo real consumiendo una API hecha en Python con Flask.</p>
+    <div class="description">
+        <h3 class="description__title">TechStore Agency</h3>
+        <p class="description__text">Landing page con dashboard en vivo, donde muestra estadísticas que se actualizan en tiempo real consumiendo una API hecha en Python con Flask.</p>
+    </div>
 
     <!-- SKILLS -->
     <div class="container__skills">
@@ -257,7 +269,10 @@
         <figure class="figure" onclick="openModal(this)">
             <img src="img/Dashboard.png" alt="Dashboard-empresarial" class="img" loading="lazy">
         </figure>
-    <p class="description">Dashboard Power bi - Tienda de informática<br> Análisis completo de ventas de una tienda de informática; rentabilidad, comparativas anuales y ranking de vendedores.</p>
+    <div class="description">
+        <h3 class="description__title">Dashboard Ventas Power BI</h3>
+        <p class="description__text">Análisis completo de ventas de una tienda de informática; rentabilidad, comparativas anuales y ranking de vendedores.</p>
+    </div>
 
     <!-- SKILLS -->
     <div class="container__skills">
@@ -298,9 +313,12 @@
 </article>
 <article class="article">
         <figure class="figure" onclick="openModal(this)">
-            <img src="img/Clima-dark.png" alt="Clima" class="img" loading="lazy">
+            <img src="img/Dashboard-rrhh.png" alt="Dashboard Recursos Humanos" class="img" loading="lazy">
         </figure>
-    <p class="description">Mood Weather — App del clima con UI adaptativa. Detecta tu ubicación y cambia visualmente según el clima en tiempo real.</p>
+    <div class="description">
+        <h3 class="description__title">Dashboard RRHH Power BI</h3>
+        <p class="description__text">Construido sobre una base de datos SQLite con datos históricos, medidas en DAX y diseño visual con navegación lateral con siete módulos.</p>
+    </div>
 
     <!-- SKILLS -->
     <div class="container__skills">
@@ -311,11 +329,11 @@
             Skills utilizadas
         </span>
         <div class="skills__list">
-            <span class="skill__badge">HTML</span>
-            <span class="skill__badge">CSS</span>
-            <span class="skill__badge">JS JavaScript</span>
-            <span class="skill__badge">API REST</span>
-            <span class="skill__badge">Geolocalización</span>
+            <span class="skill__badge">Excel</span>
+            <span class="skill__badge">SQLite</span>
+            <span class="skill__badge">Power BI</span>
+            <span class="skill__badge">DAX</span>
+            <span class="skill__badge">Modelado de datos</span>
         </div>
     </div>
 
@@ -351,20 +369,42 @@
         
         <section class="section about" id="Sobre Mi">
             <h2 class="h2">Sobre Mi</h2>
-            <div class="perfil">
-                <img class="perfil" src="img/Perfil19.jpeg">
+            <div class="about__grid">
+                <div class="photo-wrap">
+                    <div class="photo-bg-remove">
+                        <img src="img/Perfil19.jpeg" alt="Santiago Daghero">
+                    </div>
+                    <a download="Curriculum" href="CV-DAGHERO-SANTIAGO.pdf" class="btn-cv" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                        </svg>
+                        Descargar CV
+                    </a>
+                </div>
+                <div class="about__content">
+                    <div class="titles-row">
+                        <div class="titles-row__group">
+                            <span class="title-badge badge-gold">Desarrollador Frontend</span>
+                            <span class="title-badge badge-outline">Análisis de Datos</span>
+                        </div>
+                        <div class="titles-row__group">
+                            <span class="title-badge badge-outline">Lic. en Administración</span>
+                            <span class="title-badge badge-gold">Contador Público</span>
+                        </div>
+                    </div>
+                    <p class="bio">Actualmente desarrollo soluciones digitales para negocios combinando mi formación en ciencias económicas con el desarrollo web y el análisis de datos.</p>
+                    <p class="bio">Trabajo con <strong>HTML, CSS, JavaScript, SQL, Python y Power BI</strong>, aplicando un enfoque práctico y orientado a resultados.</p>
+                    <div class="quote-block">
+                        <p>"Crear soluciones simples, claras y útiles que generen un impacto real en cada proyecto."</p>
+                    </div>
+                </div>
             </div>
-            <p class="p">Soy Licenciado en Administración y Contador Público, con experiencia en entornos de alta responsabilidad, y actualmente enfocado en el desarrollo de soluciones digitales para negocios.</p>
-            <p class="p">Combino mi aprendizaje con el desarrollo web y el análisis de datos para ayudar a empresas a mejorar su presencia online y tomar decisiones más inteligentes basadas en información real.</p>
-            <p class="p">Trabajo con herramientas como HTML, CSS, JavaScript, SQL, Python y Power BI, aplicando un enfoque práctico y orientado a resultados, con el objetivo de incorporarme a este sector desde una perspectiva tanto de frontend como de análisis de datos.</p>
-            <p class="p">Mi objetivo es crear soluciones simples, claras y útiles que generen un impacto real en cada proyecto.</p>     
-            <p class="p">Me enfoco en entender cada necesidad y brindar soluciones claras, sin complejidad innecesaria.</p>        
-            <button class="cv"><a download="Curriculum" href="CV-DAGHERO-SANTIAGO.pdf">Curriculum Vitae</a></button>
         </section>
         
         <section class="section hab" id="Habilidades">
             <h2 class="h2">Habilidades</h2>
-            <p class="p">Cuento con habilidades técnicas en desarrollo web y análisis de datos, que me permiten diseñar soluciones digitales funcionales, optimizar procesos y transformar información en herramientas útiles para la toma de decisiones.</p>      
+            <p class="bio">Cuento con habilidades técnicas en desarrollo web y análisis de datos, que me permiten diseñar soluciones digitales funcionales, optimizar procesos y transformar información en herramientas útiles para la toma de decisiones.</p>      
             <h3 class="h3">Frontend</h3>
             <div class="content hab">
             <ul class="habilidades">

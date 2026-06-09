@@ -4,6 +4,40 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("active", window.scrollY > 0);
 });
 
+/* SCROLL REVEAL */
+document.addEventListener("DOMContentLoaded", function () {
+  const revealEls = document.querySelectorAll(
+    ".article, .habilidades, .about .p"
+  );
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+    );
+    revealEls.forEach((el) => {
+      el.style.opacity = "0";
+      el.style.transform = "translateY(30px)";
+      el.style.transition = "opacity .6s ease, transform .6s ease";
+      observer.observe(el);
+    });
+  }
+
+  /* NAV LINK ANIMATION */
+  const style = document.createElement("style");
+  style.textContent = `
+    .nav__link.active::after { width: 100% !important; }
+  `;
+  document.head.appendChild(style);
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -49,21 +83,22 @@ toggle.addEventListener("click", () => {
 
 
 /* LINEA ACTIVA EN NAV */
-let sections = document.querySelectorAll("section");
-let navLinks = document.querySelectorAll("header li a");
-
-window.onscroll = () => {
-  sections.forEach((sec, index) => {
+(function () {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("header li a");
+  function updateActiveLink() {
     let top = window.scrollY;
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-
-    if (top >= offset && top < offset + height) {
-      navLinks.forEach((link) => link.classList.remove("active"));
-      navLinks[index].classList.add("active");
-    }
-  });
-};
+    sections.forEach((sec, i) => {
+      let offset = sec.offsetTop - 150;
+      let height = sec.offsetHeight;
+      if (top >= offset && top < offset + height) {
+        navLinks.forEach((l) => l.classList.remove("active"));
+        navLinks[i].classList.add("active");
+      }
+    });
+  }
+  window.addEventListener("scroll", updateActiveLink);
+})();
 
 
 /* ===== CANVAS PARTICLES ===== */
