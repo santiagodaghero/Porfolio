@@ -388,62 +388,46 @@ span{
     padding-top: 0.25rem;
 }
 
-.titles-row{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 1.8rem;
+.about__roles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 1.8rem;
 }
 
-.titles-row__group{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    align-items: stretch;
+.about__role-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border: 1px solid var(--color-primario);
+  background: rgba(240,191,108,.06);
+  border-radius: 10px;
+  transition: border-color .2s, background .2s;
+  cursor: default;
 }
 
-.title-badge{
-    font-family: var(--tipo-titular);
-    font-size: 15px;
-    font-weight: 700;
-    padding: 6px 16px;
-    border-radius: 4px;
-    flex: 1;
-    text-align: center;
-    transition: all 0.35s ease;
-    cursor: default;
-    position: relative;
-    z-index: 1;
+
+.about__role-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .65rem;
+  color: var(--color-primario);
+  opacity: .7;
+  min-width: 20px;
 }
 
-.badge-gold{
-    color: var(--bkcolor-secundario);
-    background: var(--color-primario);
-}
-
-.badge-gold:hover{
-    color: var(--color-primario);
-    background: transparent;
-    border: 1px solid var(--color-primario);
-}
-
-.badge-outline{
-    color: var(--color-primario);
-    background: transparent;
-    border: 1px solid var(--color-primario);
-}
-
-.badge-outline:hover{
-    color: var(--bkcolor-secundario);
-    background: var(--color-primario);
+.about__role-item span:last-child {
+  font-size: .88rem;
+  font-weight: 500;
+  color: var(--color-secundario);
 }
 
 .bio{
     font-size: 15px;
     color: var(--color-texto);
     line-height: 1.85;
-    margin-bottom: 1rem;
-    max-width: 40em;
+    margin-bottom: 2rem;
+    max-width: 45em;
     text-align: left;
 }
 
@@ -481,30 +465,30 @@ span{
 }
 
 .section .h2_presentation{
-    font-family: var(--tipo-titular);
+    font-family: 'Syne', sans-serif;
     font-size: 5em;
-    font-weight: 600;
+    font-weight: 700;
     color:var(--color-primario2);
 
 
 }
 .section .h3_presentation{
     margin: 0.8em 0 0;
-    font-family: var(--tipo-titular);
+    font-family: 'Syne', sans-serif;
     font-size: 2em;
     font-weight: 600;
     color: var(--color-primario2)
 }
 
 .section .h2{
-    font-family: var(--tipo-titular);
+    font-family: 'Syne', sans-serif;
     font-size: 5em;
-    font-weight: 600;
+    font-weight: 700;
     color:var(--color-primario);
 }
 .section .h3{
     margin: 15px 0 ;
-    font-family: var(--tipo-titular);
+    font-family: 'Syne', sans-serif;
     font-size: 2em;
     font-weight: 600;
     color: var(--color-primario);
@@ -521,7 +505,7 @@ span{
 
 .h3_presentation.text-animation {
     font-family:'Times New Roman', Times, serif;
-    width: 79%;
+    width: 65%;
     animation: typing 3s steps(31), blink .4s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
@@ -606,12 +590,13 @@ li::marker {
 
 .section.hab .bio,
 .section.trabajos .bio{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
     font-size: 1.1rem;
-    max-width: 50em;
+    max-width: 45em;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1rem;
 }
 
 .section .article{
@@ -1273,11 +1258,8 @@ html {
         width: 180px;
         height: 230px;
     }
-    .titles-row{
-        align-items: center;
-    }
-    .titles-row__group{
-        justify-content: center;
+    .about__roles-grid{
+        justify-items: center;
     }
     .bio{
         text-align: left;
