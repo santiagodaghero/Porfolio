@@ -901,8 +901,112 @@ p.description{
 .light-theme .section.hab .content:nth-of-type(3) .habilidades:nth-of-type(1) .li:nth-child(4) .skill { color: #6C5CE7; } /* DrawDB */
 .light-theme .section.hab .content:nth-of-type(3) .habilidades:nth-of-type(1) .li:nth-child(5) .skill { color: #087CFA; } /* Hosting (Netlify/Vercel blue) */
 
+/* ===== STUDIO / PROYECTO SECTION ===== */
+.section.studio {
+  background-color: var(--bkcolor-primario);
+  justify-content: flex-start;
+  padding: 5em 1em 4em;
+  scroll-margin-top: 5em;
+}
+
+.section.studio > .h2 {
+  margin-bottom: 0.1em;
+}
+
+.studio__grid {
+  width: 100%;
+  max-width: 42em;
+  margin: 0 auto;
+}
+
+.section.studio .studio__grid .article {
+  height: auto;
+  min-height: unset;
+  overflow: visible;
+  box-shadow: var(--shadow-card-hover);
+}
+
+.section.studio .studio__grid .article .description__title {
+  font-size: 1.4rem;
+  margin-bottom: 0.5em;
+}
+
+.section.studio .studio__grid .article .description__text strong {
+  color: var(--color-primario);
+}
+
+.studio__grid .article .figure {
+  height: 280px;
+}
+
+.studio__grid .article .figure .img {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.article .conteiner__code.studio__cta {
+  display: block !important;
+  text-align: center;
+  padding: 1.5em 0.7em;
+  width: 100%;
+}
+
+.studio__cta-text {
+  font-family: var(--tipo-titular);
+  font-size: 1.05rem;
+  color: var(--color-primario);
+  text-align: center;
+  margin: 0 0 14px 0;
+}
+
+.studio__btn-ingreso {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 32px;
+  border-radius: 30px;
+  background-color: #f0bf6c;
+  color: #1d1d1d;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: none;
+  line-height: 1;
+}
+
+.studio__btn-ingreso:hover {
+  background-color: #ffffff;
+  color: #1d1d1d;
+  transform: scale(1.05);
+}
+
+.studio__btn-ingreso svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .section.studio {
+    align-items: center;
+    padding: 3em 1em;
+  }
+  .studio__grid {
+    width: 100%;
+  }
+  .section.studio .studio__grid .article {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
+}
+
 .contacto{
-    background-color: var(--bkcolor-primario);}
+    background-color: var(--bkcolor-secundario);}
     
 .contact_form{	
     width: 100%;

@@ -7,7 +7,7 @@ window.addEventListener("scroll", function () {
 /* SCROLL REVEAL */
 document.addEventListener("DOMContentLoaded", function () {
   const revealEls = document.querySelectorAll(
-    ".article, .habilidades, .about .p"
+    ".article, .habilidades, .about .p, .studio__card"
   );
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
